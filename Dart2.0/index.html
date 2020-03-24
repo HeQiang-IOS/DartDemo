@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+    </body>
+</html>
+<script>
+    function *fids(){
+        let a = 1;
+        let b = 2;
+        while(true){
+            yield a;
+            [a, b] = [b, a + b];
+        }
+    }
+    let [first, second, third, fourth, fifth, sixth] = fids();
+    console.log(first, second, third, fourth, fifth, sixth);
+</script>
